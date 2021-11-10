@@ -1,11 +1,15 @@
 
-from timeit import timeit
+from random import randint
+from fib_py import fib
 
-py = timeit('fib(93)', number=1_000_000, setup='from fib_py import fib')
-cy = timeit('fib(93)', number=1_000_000, setup='from fib_cy import fib')
+numeros = [randint(0, 93) for x in range(100_000)]
 
-print("Tempo do Python Puro: ", py)
-# 4.7648235
 
-print("Tempo do Cython: ", cy)
-print(f'{py/cy}')
+for x in numeros:
+    fib(x)
+
+# python -m cProfile -o prof run.py
+# python -m pstats prof
+
+# cProfile "profila" o código Python e retorna um arquivo binário
+# pstats torna o arquivo binário legível, para questões de performace

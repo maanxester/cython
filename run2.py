@@ -1,6 +1,5 @@
-
 from random import randint
-from fib_py import fib
+from fib_cy import fib
 
 numeros = [randint(0, 93) for x in range(100_000)]
 
