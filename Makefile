@@ -10,4 +10,4 @@ clean:
 	rm -f *.so
 	rm -f *.html
 	rm -rf build
-	rm -f *.c
+	rm -f f*.c
