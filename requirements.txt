@@ -1,0 +1,4 @@
+begins==0.9
+Cython==0.29.24
+easycython==1.0.7
+numpy==1.21.4
