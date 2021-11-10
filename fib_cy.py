@@ -6,15 +6,27 @@
 # -i cria um módulo que podemos importar no python
 # $ cythonize -a -i fib_py.py
 
-def fib(n):
-    a = 0
-    b = 1
+# def fib(n: int) -> int:  # Implementação de type hints
+#     a: int = 0
+#     b: int = 1
+#
+#     # Não existe em C
+#     for i in range(n):
+#         a, b = a + b, a
+#
+#     return a
 
-    # Não existe em C
+import cython
+
+
+def fib(n: cython.int):  # Tipagem em C
+    i: cython.int
+    a: cython.ulonglongint = 0
+    b: cython.ulonglongint = 1
+
     for i in range(n):
         a, b = a + b, a
 
-    return a
 
 # Retorna um arquivo C com muitas linhas de código, pois o C precisa entender a tipagem, erros etc.
 # Evitando NullPointer, Stack OverFlow.
