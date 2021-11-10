@@ -1,6 +1,7 @@
 build:
 	easycython fib_cy.py
 	easycython *.pyx
+	python setup.py build_ext -if
 
 
 clean:
