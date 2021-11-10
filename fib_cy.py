@@ -29,4 +29,4 @@ def fib(n: cython.int):  # Tipagem em C
 
 
 # Retorna um arquivo C com muitas linhas de código, pois o C precisa entender a tipagem, erros etc.
-# Evitando NullPointer, Stack OverFlow.
+# Evitando NullPointer, OverFlowError.
